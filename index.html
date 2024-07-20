@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<style>
+    body {
+        font-family: 'IBM+Plex+serif';
+        display: flex;
+        justify-content: center;
+    }
+    #btn-alert {
+        background-color: rgb(76, 214, 113);
+        position: fixed;
+        left: 45%;
+        top: 45%;
+        font-weight: bold;
+    }
+
+    @media (max-width: 576px) {
+        #btn-alert {
+            left: 38%;
+        }
+    }
+</style>
+    <title>Special 20th</title>
+</head>
+<body>
+
+    <button id="btn-alert" onclick="munculAlert()">Di Klik Yaaw</button>
+  <script>
+    async function munculAlert() {
+        await Swal.fire("Hi Arum :)")
+        await Swal.fire("Happy 20th bestie!")
+        await Swal.fire({
+            title: "Happy 20th Birthday Arum !",
+            text: "Semoga panjang umur, sehat, bahagia, dilancarkan kuliahnya, dilancarkan juga rezeki dan jodohnya uhuyy hehe",
+            imageUrl: "https://cdn.idntimes.com/content-images/community/2021/10/fromandroid-bada8a873b1ba8cf2cef1ae789212328.jpg",
+            imageWidth: 400,
+            imageHeight: 200,
+            imageAlt: "Memes 20th",
+        })
+        await Swal.fire({
+            title: "Welcome to 20th club !",
+            text: "Btw aku nemuin kata-kata buat kamu dari tiktok hehe. katanya gini diumur 20an harus berani mengambil keputusan yang berat, berani meninggalkan comfort zone, pergi dimana orang tak kenal kamu, agar kamu tau suskses itu di tangan mu bukan di tangan orang :) ingat yaa cantik, orang lain hanya perantara saja.",
+            imageUrl: "https://i.ibb.co.com/qWfpNqc/photo-2024-07-20-12-00-12.jpg",
+            imageWidth: 400,
+            imageHeight: 450,
+            imageAlt: "Foto Arum",
+        })
+        await Swal.fire({
+            title: "Gimana perasaan kamu memasuki era kepala duo inii ?",
+            text: "Ayoo pilih button nya yaaw",
+            icon: "question",
+            showDenyButton: true,
+            confirmButtonColor: "#3085d6",
+            confirmButtonText: "Happy bgttt (❁´◡`❁)",
+            denyButtonText: `Takut tambah dewasaa ಥ_ಥ`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Mission success",
+                    text: "Wahh selamat yaaww kalo kamu happy aku turut happy jugaa nih bestie hehee",
+                    imageUrl: "https://img.freepik.com/premium-vector/flork-meme-happy-flork-meme-happy-birthday-vector-happy-birthday-vector_622487-2024.jpg?w=740",
+                    imageWidth: 400,
+                    imageHeight: 450,
+                    imageAlt: "Foto happy",
+                });
+            } else {
+                Swal.fire({
+                       title: "Selamat, ini sudah takdir",
+                       text: "Ya mau gimana lagi dah begini namanya juga hidup 😭",
+                       imageUrl: "https://pbs.twimg.com/media/FexkN_9agAIFIke.jpg",
+                       imageWidth: 400,
+                       imageHeight: 450,
+                       imageAlt: "Fotot sad",
+                })
+            }
+        })
+    }
+  </script>  
+</body>
+</html>
